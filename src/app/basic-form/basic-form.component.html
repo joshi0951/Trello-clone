@@ -1,0 +1,40 @@
+<div class="host">
+    <form (ngSubmit)="userRegister()" method="POST">
+
+        <mat-card class="example-card">
+            <mat-card-title>
+                User Registration
+            </mat-card-title>
+
+            <mat-card-content>
+                <mat-form-field>
+                    <input type="email" matInput placeholder="Email" name ="email" [(ngModel)]="user.email">
+                </mat-form-field>
+            </mat-card-content>
+                
+            <mat-card-content>
+                <mat-form-field>
+                    <input type="number" matInput placeholder="Phone Number" name ="phone" [(ngModel)]="user.phone">
+                </mat-form-field>
+            </mat-card-content>
+                
+            <mat-card-content>
+                <mat-form-field>
+                    <input matInput placeholder="First Name"  name ="name" [(ngModel)]="user.name">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="Password"  name ="password" [(ngModel)]="user.password">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <button type="submit" mat-raised-button color="primary">Submit</button>
+            </mat-card-content>
+        </mat-card>
+
+    </form>
+    
+</div>

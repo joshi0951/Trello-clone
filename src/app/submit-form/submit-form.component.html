@@ -1,0 +1,23 @@
+<div class="host">
+    <br>
+    <form (ngSubmit)="userCheck()" method="POST">
+      <mat-card class="example-card">
+        <mat-card-title>
+          Sign In
+        </mat-card-title>
+        <mat-card-content>
+          <mat-form-field>
+            <input matInput type="number" name ="phone" [(ngModel)]="user.phone" placeholder="Enter Mobile Number">
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-form-field>
+            <input matInput type="password" name ="pass" [(ngModel)]="user.pass" placeholder="Enter Password">
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content>
+          <button type="submit" mat-raised-button color="primary">Submit</button>
+        </mat-card-content>
+      </mat-card>
+    </form>
+</div>
