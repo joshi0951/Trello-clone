@@ -23,7 +23,7 @@ export class UserServiceService {
   }​​​​​​​​​​
 
   getBoardData():Observable<Board>{
-    const url="http://localhost:8080/checkBoard.api";
+    const url="http://localhost:8080/login/checkBoard.api";
     return this.http.get<Board>(url);
   }
 }
