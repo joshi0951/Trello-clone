@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from "@angular/forms";
+import { Router } from '@angular/router';
 import { UserServiceService } from '../user-service.service';
 import { UserInfo } from '../UserInfo';
 
@@ -10,7 +10,7 @@ import { UserInfo } from '../UserInfo';
 })
 export class BasicFormComponent implements OnInit {
 
-  constructor(private service: UserServiceService) { }
+  constructor(private service: UserServiceService, private router: Router) { }
 
   user: UserInfo= new UserInfo();
 
@@ -21,6 +21,7 @@ export class BasicFormComponent implements OnInit {
     this.service.registerUser(this.user).subscribe(data=>{
       if(JSON.stringify(data)=="true"){
         alert("User Registered");
+        this.router.navigate(["login"]);
       }else{
         alert("User Already Exists");
       };

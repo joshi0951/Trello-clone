@@ -1,0 +1,7 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.toolbar{
+  background: linear-gradient(to right, rgb(120,230, 240), rgb(120, 240, 170));
+}

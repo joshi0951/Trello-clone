@@ -1,17 +1,27 @@
-<div style="background-color: #2d2d2b; height: 800px;">
-    <div style="text-align: center;">
-        <h1 style="color: aliceblue; font-size: 50px; padding-top: 15px;">Welcome</h1>
-    </div>
-    <div style="text-align: center; padding-top: 1cm;">
-        <nav>
-            <button mat-raised-button color="primary" routerLink="/login">Sign In</button>
-        </nav>
-        <nav style="padding-top: 1cm;padding-bottom: 1cm;">
-            <button mat-raised-button color="accent" routerLink="/register">Register</button>
-        </nav>
-    </div>
-    <div style="text-align: center">
-        <router-outlet></router-outlet>
-    </div>
+<mat-toolbar class="toolbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with stream icon">
+        <mat-icon>stream</mat-icon>
+      </button>
+    <span>Trello Clone</span>
+    <span class="example-spacer"></span>
 
+    <button mat-raised-button color="accent" routerLink="/register">Register</button>
+
+    <button mat-raised-button color="primary" routerLink="/login">Sign In</button>
+
+    <button mat-raised-button color="accent" routerLink="/board">main board</button>
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with manager accounts icon">
+        <mat-icon>manage_accounts</mat-icon>
+      </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+<div style="background: rgba(155, 144, 142, 0.5);">
+    <router-outlet></router-outlet>
 </div>
