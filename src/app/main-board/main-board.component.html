@@ -1,3 +1,52 @@
+<mat-toolbar class="toolbar">
+  <span class="example-spacer"></span>
+  <span class="material-icons" margin ="left">
+    apps
+    </span>
+    <span class="material-icons">
+      home
+      </span>
+      <!-- <button class="_2ZNy4w8Nfa58d1 voB8NatlbuEme5 YkLuOsDsiYKMs8" data-test-id="header-boards-menu-button" type="button" aria-label="Open boards menu"> -->
+        <span class="nch-icon _2_Q6rrYCFblD3M _3Dk1GPoKnJxuep _3IkOtLubuAF6kK _1iYprMLTeGpyW9"><span class="sc-bdVaJa kBFJig" role="img" aria-label="BoardIcon"><svg width="24" height="24" role="presentation" focusable="false" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM5 6C5 5.44772 5.44772 5 6 5H10C10.5523 5 11 5.44772 11 6V16C11 16.5523 10.5523 17 10 17H6C5.44772 17 5 16.5523 5 16V6ZM14 5C13.4477 5 13 5.44772 13 6V12C13 12.5523 13.4477 13 14 13H18C18.5523 13 19 12.5523 19 12V6C19 5.44772 18.5523 5 18 5H14Z" fill="currentColor">
+
+      </path> 
+      </svg></span></span><span class="MEu8ZECLGMLeab jzoyoXbgB9Btow">Boards</span>
+    <!-- </button> -->
+      <a href="/search" class="_2ZNy4w8Nfa58d1"><span class="nch-icon _2_Q6rrYCFblD3M _3Dk1GPoKnJxuep _35K2W68MBDEnev"><span class="sc-bdVaJa kBFJig" role="img" aria-label="SearchIcon"><svg width="24" height="24" role="presentation" focusable="false" 
+        viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5C18 12.2269 17.4164 13.8175 16.4356 15.0852L20.3769 19.0953C20.764 19.4892 20.7586 20.1223 20.3647 20.5095C19.9708 20.8966 19.3376 20.8911 18.9505 20.4972L15.0129 16.4909C13.7572 17.4383 12.1942 18 10.5 18ZM16 10.5C16 13.5376 13.5376 16 10.5 16C7.46243 16 5 13.5376 5 10.5C5 7.46243 7.46243 5 10.5 5C13.5376 5 16 7.46243 16 10.5Z" 
+        fill="currentColor">
+
+      </path></svg></span></span></a>
+
+      <!-- <button class="_2ZNy4w8Nfa58d1 voB8NatlbuEme5 YkLuOsDsiYKMs8 _2tLfIUU690S1hn" data-test-id="header-create-menu-button" type="button" aria-label="Create board or Workspace"> -->
+        <span class="nch-icon _2_Q6rrYCFblD3M _3Dk1GPoKnJxuep _1hS8KBZ_zkPTrz _1iYprMLTeGpyW9">
+          <span class="sc-bdVaJa kBFJig" role="img" aria-label="AddIcon"><svg width="24" height="24" role="presentation" focusable="false" viewBox="0 0 24 24"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z" fill="currentColor">
+      </path></svg></span></span>
+    <!-- </button> -->
+
+      <!-- <span class="material-icons"  style="float: right;">
+        account_circle
+        </span> -->
+    <button mat-button [matMenuTriggerFor]="menu">
+      <span class="material-icons"  style="float: right">
+        account_circle
+        </span>
+    </button>
+          <mat-menu #menu="matMenu">
+  <button mat-menu-item>Add another account</button>
+  <button mat-menu-item>Profile and visibility</button>
+  <button mat-menu-item>Acitivity</button>
+  <button mat-menu-item>Cards</button>
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+  <button mat-menu-item>Shortcut</button>
+  <button mat-menu-item>Logout</button>
+</mat-menu>
+
+
+</mat-toolbar>
+
+
 <div class="board">
     <div class="board-bar">
         <p class="board-name">{{ board.name }}</p>
@@ -12,6 +61,39 @@
                   <div class="task" *ngFor="let item of column.tasks" cdkDrag>
                     {{ item }}
                   </div>
+                            <!-- #docregion multi -->
+          <mat-accordion class="example-headers-align" multi>
+            <!-- #enddocregion multi -->
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <span class="material-icons"  margin ="left">
+                    add
+                    </span>
+                    
+                  <!-- <mat-panel-title>
+                    Personal data
+                  </mat-panel-title> -->
+                  <!-- <mat-panel-description>
+                    <mat-icon>account_plus</mat-icon>
+                  </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <mat-form-field>
+                  <!-- <mat-label>First name</mat-label> -->
+                  <textarea matInput placeholder="Enter a title for this card..." [(ngModel)]="value" >
+                  </textarea>
+                </mat-form-field>
+                <div >
+                <button mat-raised-button color="primary">Add</button>
+               <span class="material-icons"  (click)="value=''">
+                close
+                </span>
+              </div>
+              </mat-expansion-panel>
+            <!-- #docregion disabled -->
+              <mat-expansion-panel disabled>
+              </mat-expansion-panel>
+           </mat-accordion>       
+  
                 </div>
             </div>
         </div>

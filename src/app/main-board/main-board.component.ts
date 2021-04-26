@@ -47,7 +47,7 @@ export class MainBoardComponent implements OnInit {
     this.service.getBoardData().subscribe(data=>
       {
         this.board=data;
-        this.column=data.columns;
+       // this.column=data.columns;
         console.log(this.board);
       });
       

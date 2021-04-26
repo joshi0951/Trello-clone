@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Board } from './model/board.model';
+import { Login } from './model/login.model';
 import { UserInfo } from './UserInfo';
 import { UserDTO } from './UserLoginParameter';
 
@@ -12,14 +13,14 @@ export class UserServiceService {
 
   constructor(private http: HttpClient) { }
 
-  userLoginVerification(ulp: UserDTO):Observable<boolean>{
-    const url="http://localhost:8080/loginCheck";
-    return this.http.post<boolean>(url,ulp);
+  userLoginVerification(ulp: UserDTO):Observable<Login>{
+    const url="http://localhost:8080/login/checkLogin";
+    return this.http.post<Login>(url,ulp);
   }
 
-  registerUser(us: UserInfo){​​​​​
-    const url="http://localhost:8080/register";
-    return this.http.post(url,us);
+  registerUser(us: UserInfo):Observable<Login>{​​​​​
+    const url="http://localhost:8080/login/register";
+    return this.http.post<Login>(url,us);
   }​​​​​​​​​​
 
   getBoardData():Observable<Board>{
